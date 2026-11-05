@@ -1,5 +1,5 @@
 
-name: Imagify Frontend CI
+name: Imagify CI
 
 on:
   push:
@@ -18,11 +18,9 @@ jobs:
         working-directory: ./client
 
     steps:
-      # Step 1: Get repository code
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 2: Install Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -30,10 +28,30 @@ jobs:
           cache: npm
           cache-dependency-path: client/package-lock.json
 
-      # Step 3: Install dependencies
-      - name: Install Dependencies
+      - name: Install Frontend Dependencies
         run: npm ci
 
-      # Step 4: Build React application
       - name: Build Frontend
         run: npm run build
+
+  backend:
+    name: Install Backend Dependencies
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./server
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: server/package-lock.json
+
+      - name: Install Backend Dependencies
+        run: npm ci
