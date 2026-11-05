@@ -3,7 +3,7 @@ import {createContext, useState} from 'react';
 export const AppContext = createContext();
 
 const AppContextProvider = (props)=>{
-        const [user, setUser] = useState(null); //logged out by default
+        const [user, setUser] = useState(false); //logged out by default
 
         const value = {
             user, setUser

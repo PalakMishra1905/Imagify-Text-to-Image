@@ -25,9 +25,10 @@ const Result = () => {
        <p className={!loading ? 'hidden' : ' '}>Loading...</p> 
      </div>
       
-    {!isImageLoaded && //if it is true then this will be displayed
+    {!isImageLoaded && //if image loaded then show input and generate btns.
        <div className='flex w-full max-w-xl bg-neutral-500 text-white
        text-sm p-0.5 mt-10 rounded-full'>
+
          <input onChange={e => setInput(e.target.value)} value={input}
           type='text' placeholder='Describe what you want to generate'
          className='flex-1 bg-transparent outline-none ml-8 
@@ -38,7 +39,7 @@ const Result = () => {
          >Generate</button>   
        </div> }
 
-    {isImageLoaded && 
+    {isImageLoaded && //if image is not loaded then hide generate another and download btns.
        <div className='flex flex-wrap gap-2 justify-center text-white 
        text-sm p-0.5 mt-10 rounded-full'>
          <p onClick={()=>(setIsImageLoaded(false))}
