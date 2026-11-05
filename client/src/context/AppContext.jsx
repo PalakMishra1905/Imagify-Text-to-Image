@@ -4,9 +4,11 @@ export const AppContext = createContext();
 
 const AppContextProvider = (props)=>{
         const [user, setUser] = useState(false); //logged out by default
+        const [showLogin, setShowLogin] = useState(false);
 
         const value = {
-            user, setUser
+            user, setUser,
+            showLogin, setShowLogin
         }
 
         return(
