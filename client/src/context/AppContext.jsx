@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 const AppContextProvider = (props)=>{
         const [user, setUser] = useState(false); //logged out by default
-        const [showLogin, setShowLogin] = useState(false);
+        const [showLogin, setShowLogin] = useState(false); //Show login form
 
         const value = {
             user, setUser,
