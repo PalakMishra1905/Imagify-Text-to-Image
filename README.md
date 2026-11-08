@@ -4,6 +4,13 @@ Imagify is an AI-powered web application that transforms text prompts into visua
 
 The project is built using the MERN stack, combining a responsive React frontend with a Node.js and Express backend.
 
+## 🌐 Live Demo
+
+- **Frontend:** [Imagify – AI Text-to-Image Generator](https://imagify-frontend-eta-rouge.vercel.app/)
+- **Backend API:** [Imagify Backend – Render](https://imagify-backend-ty6c.onrender.com)
+
+Try the live application and experience AI-powered image generation!
+
 ## ✨ Features
 
 - **AI Image Generation:** Convert text descriptions into AI-generated images.
