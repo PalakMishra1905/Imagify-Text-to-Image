@@ -6,8 +6,8 @@ The project is built using the MERN stack, combining a responsive React frontend
 
 ## 🌐 Live Demo
 
-- **Frontend:** [Imagify – AI Text-to-Image Generator](https://imagify-frontend-eta-rouge.vercel.app/)
-- **Backend API:** [Imagify Backend – Render](https://imagify-backend-ty6c.onrender.com)
+- **Frontend:** https://imagify-frontend-eta-rouge.vercel.app/
+- **Backend API:** https://imagify-backend-ty6c.onrender.com
 
 Try the live application and experience AI-powered image generation!
 
